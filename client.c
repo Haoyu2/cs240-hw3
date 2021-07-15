@@ -21,14 +21,18 @@ int main(int argc, char* argv[])
 	 * ./client -n nValue -s seedValue
 	 */
 	
-	while ((c = getopt(argc, argv, "n:s:")) != -1) {
-		switch (c) {
-		case 'n': sscanf(optarg, "%u", &n); break;
-		case 's': sscanf(optarg, "%d", &seed); break;
-		default: break;
-		}
-	}
+	// while ((c = getopt(argc, argv, "n:s:")) != -1) {
+	// 	switch (c) {
+	// 	case 'n': sscanf(optarg, "%u", &n); break;
+	// 	case 's': sscanf(optarg, "%d", &seed); break;
+	// 	default: break;
+	// 	}
+	// }
+
+	n = atoi(argv[2]);
+	seed = atoi(argv[4]);
 	printf("Seed: %d		Points Number: %d\n", seed,n);
+
 
 
     Points points = createData(seed,n);

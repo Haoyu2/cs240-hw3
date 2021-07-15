@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include <getopt.h>
+// #include <getopt.h>
 #ifndef TEST_FILE
 #define TEST_FILE(f,s,s1) 	\
 		if (NULL==f){		\

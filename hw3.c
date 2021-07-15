@@ -62,8 +62,5 @@ Points createData(int seed,int num)
 
 void freePoints(Points points)
 {
-	for (int i = 0; i < points.length; ++i)
-	{
-		free(points.data[i]);
-	}
+	free(points.data);
 }
