@@ -1,7 +1,7 @@
 client-debug = client-debug.exe 
 client-ag = client-ag.exe 
 
-all : $(client-ag)
+all : $(client-debug)
 	./$< -n 32 -s 2020
 	python plot.py
 
@@ -13,10 +13,10 @@ debug : $(client-debug)
 	./$(client-debug)
 
 $(client-debug) : client.c hw3.c 
-	@gcc -o $@ $^
+	@gcc -lm -o $@ $^
 
 $(client-ag) : client.c hw3.c 
-	@gcc -o $@ $^ -D AUTOGRADER
+	@gcc -lm -o $@ $^ -D AUTOGRADER
 
 
 
