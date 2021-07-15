@@ -15,7 +15,7 @@
 
 
 
-PointAngles sorting_angle(Point points)
+void sorting_angle(Points points)
 {
 	/*
 	*  Code
