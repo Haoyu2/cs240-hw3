@@ -36,7 +36,7 @@ int main(int argc, char* argv[])
 	write2csv(points, "points.csv");
 	Points convPs = convex(Points points);
 	write2csv(points, "sortedPoints.csv");
-	free(points);
+	freePoints(points);
 
 	return 0;
 }
