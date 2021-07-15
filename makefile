@@ -13,10 +13,10 @@ debug : $(client-debug)
 	./$(client-debug)
 
 $(client-debug) : client.c hw3.c 
-	@gcc -lm -o $@ $^
+	@gcc  -o $@ $^ -lm
 
 $(client-ag) : client.c hw3.c 
-	@gcc -lm -o $@ $^ -D AUTOGRADER
+	@gcc -o $@ $^ -D AUTOGRADER -lm 
 
 
 
