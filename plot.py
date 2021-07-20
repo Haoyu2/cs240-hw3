@@ -30,7 +30,7 @@ with open('sortedPoints.csv', newline='') as csvfile:
 
 
 plt.scatter(x, y, marker='o', color = 'r')
-plt.scatter(x2[0:1], y2[0:1], marker='*', color = 'b')
+plt.scatter(x2[0:1], y2[0:1], marker='o', color = 'b')
 
 plt.plot(x2,y2, label='Polar angle points line')
 plt.plot(x1,y1, label='Convex hull')
