@@ -19,18 +19,20 @@ with open('pointsCon.csv', newline='') as csvfile:
         y1.append(float(row[1]))
 
 
-# x2 = []
-# y2 = []
-# with open('sortedPoints.csv', newline='') as csvfile:
-#     spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
-#     for row in spamreader:
-#         x2.append(float(row[0]))
-#         y2.append(float(row[1]))
+x2 = []
+y2 = []
+with open('sortedPoints.csv', newline='') as csvfile:
+    spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
+    for row in spamreader:
+        x2.append(float(row[0]))
+        y2.append(float(row[1]))
 
 
 
 plt.scatter(x, y, marker='o', color = 'r')
-# plt.plot(x2,y2, label='Polar angle points line')
+plt.scatter(x2[0:1], y2[0:1], marker='*', color = 'b')
+
+plt.plot(x2,y2, label='Polar angle points line')
 plt.plot(x1,y1, label='Convex hull')
 plt.legend()
 plt.savefig(f'plot_{len(x)}.png')

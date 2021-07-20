@@ -37,10 +37,13 @@ int main(int argc, char* argv[])
 
     Points points = createData(seed,n);
 	sorting_angle(points);
-	write2csv(points, "points.csv");
-	Points convPs = convex(Points points);
 	write2csv(points, "sortedPoints.csv");
+	write2csv(points, "points.csv");
+
+	Points convPs = convex(points);
+	write2csv(points, "pointsCon.csv");
 	freePoints(points);
+	freePoints(convPs);
 
 	return 0;
 }

@@ -2,7 +2,7 @@ client-debug = client-debug.exe
 client-ag = client-ag.exe 
 
 all : $(client-debug)
-	./$< -n 32 -s 2020
+	./$< -n 12 -s 1010
 	python plot.py
 
 
